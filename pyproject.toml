@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "hltb-extractor"
+version = "0.1.0"
+description = "A application to extract a list of games duration data from https://howlongtobeat.com/"
+authors = ["Bruno Araujo <araujo.contato@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+selenium = "^4.19.0"
+tabulate = "^0.9.0"
+
+[tool.poetry.group.dev.dependencies]
+autopep8 = "^2.1.0"
+flake8 = "^7.0.0"
+
+[tool.poetry.scripts]
+start = "src.hltb_extractor.extractor:start"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
